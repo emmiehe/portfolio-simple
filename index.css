@@ -34,13 +34,13 @@
     --bg-color-nav: #dddddd;
     --txt-color-primary: #393b44;
     --txt-color-secondary: blue; /* #000080; */
-    --intro-height: 28rem;
-    --padding-top: 10rem;
-    --padding-bottom: 2rem;
-    --padding-between: 5rem;
-    --padding-header: 3rem;
-    --pic-height: 15rem;
-    --pic-sm-height: 12rem;
+    --intro-height: 18vh;
+    --padding-top: 14vh;
+    --padding-bottom: 2vh;
+    --padding-between: 5vh;
+    --padding-header: 3vh;
+    --pic-height: 15vh;
+    --pic-sm-height: 12vh;
 }
 
 body {
@@ -80,8 +80,8 @@ h3{
 }
 
 h5{
-    max-width: 35rem;
-    margin: 1.5rem;
+    max-width: 46vh;
+    margin: 1.5vh;
 }
 
 a{
@@ -89,18 +89,8 @@ a{
 }
 
 p{
-    max-width: 35rem;
+    max-width: 46vh;
     margin: 1.0rem 1.5rem 0.5rem 1.5rem; 
-}
-
-#bg-cover {
-    padding-top: 15rem; /* the 'window' */
-    background-color: var(--bg-color);
-    /*opacity: 0.8;*/
-    /*background: url(./img/logo.gif) no-repeat center center fixed;*/
-    width: 100%;
-    background-size: cover;
-    overflow: hidden;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -112,10 +102,6 @@ p{
 	--padding-header: 1rem;
 	--pic-height: 10rem;
 	--pic-sm-height: 8rem;
-    }
-
-    #bg-cover {
-	padding-top: 0rem; /* not showing the bg for smaller devices */
     }
 
     h1 {
@@ -131,7 +117,7 @@ p{
     }
 
     h5,p {
-	margin: 0.5rem;
+	margin: 0.5vh;
     }
 
 }
@@ -153,37 +139,39 @@ p{
 }
 
 .card {
-    border-radius: 20px;
+    border-radius: 3vh;
     position: relative;
-    max-width: 50vh;
-    max-height: 80vh;
-    margin: 2vh;
+    max-width: 48vh;
+    max-height: 60vh;
     border: none;
     box-shadow: 1vh 1vh 1vh grey;
     transition: .5s ease;
-    background-color: var(--txt-color-primary);
+    transform: translateX(-5vh) rotateY(-20deg) rotateX(50deg);
     color: var(--bg-color);
+    background-color: var(--bg-color);
+}
+
+.card:hover {
+    transform: translate(-1px, 1px);
+    background-color: var(--txt-color-primary);
 }
 
 .image {
-    border-radius: 20px;
+    border-radius: 3vh;
     opacity: 1;
     display: block;
     width: 100%;
     height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
-
-
-    -webkit-filter: grayscale(100%);
+    /*-webkit-filter: grayscale(100%);*/
 }
 
 
 .card:hover .image {
     opacity: 0.1;
-
     /*transform: scale(1.2);*/
-    -webkit-filter: grayscale(0%);
+    /*-webkit-filter: grayscale(0%);*/
 }
 
 
@@ -195,16 +183,34 @@ p{
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    text-align: center;
-    -webkit-filter: grayscale(100%);
+    /*text-align: center;*/
+    /*-webkit-filter: grayscale(100%);*/
 }
 
 .card:hover .middle {
     opacity: 1;
     /*transform: scale(1.2);*/
-    -webkit-filter: grayscale(0%);
+    /*-webkit-filter: grayscale(0%);*/
 }
 
-.card:hover {
-    transform: translate(-1vh, -2vh);
+
+/* https://fdossena.com/?p=html5cool/buttons/i.frag */
+.bouncy {
+    animation:bouncy 5s infinite linear;
+    position:relative;
+}
+
+.bouncy{
+    animation:bouncy 5s infinite linear;
+    position:relative;
+}
+
+@keyframes bouncy {
+    0%{top:0em}
+    40%{top:0em}
+    43%{top:-0.9em}
+    46%{top:0em}
+    48%{top:-0.4em}
+    50%{top:0em}
+    100%{top:0em;}
 }
