@@ -51,9 +51,27 @@ body {
     color: var(--txt-color-primary);
 }
 
-#navbar {
-    background-color: var(--bg-color-nav);
-}
+/*.navbar {*/
+/*    overflow: hidden;*/
+/*    background-color: var(--bg-color-nav);*/
+/*    position: fixed;*/
+/*    float: right;*/
+/*}*/
+
+/*.navbar a {*/
+/*    font-family: var(--font-header);*/
+/*    font-size: 28px;*/
+/*    padding: 2vh;*/
+/*    color: var(--txt-color-primary);*/
+/*    background-color: var(--bg-color-nav);*/
+/*    text-align: right;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*.navbar a:hover {*/
+/*    background-color: var(--txt-color-primary);*/
+/*    color: var(--bg-color);*/
+/*}*/
 
 #projects, #about-me {
     padding-top: var(--padding-top); 
@@ -157,7 +175,6 @@ h5, p{
     backface-visibility: hidden;
     /*-webkit-filter: grayscale(100%);*/
 }
-
 
 .card:hover .image {
     opacity: 0.1;
