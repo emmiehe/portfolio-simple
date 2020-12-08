@@ -122,7 +122,6 @@ h5, p{
 
 }
 
-
 .card {
     border-radius: 3vh;
     position: relative;
@@ -160,7 +159,6 @@ h5, p{
     /*-webkit-filter: grayscale(0%);*/
 }
 
-
 .back {
     transition: .5s ease;
     opacity: 0;
@@ -182,19 +180,31 @@ h5, p{
     /*-webkit-filter: grayscale(0%);*/
 }
 
-
-/* https://fdossena.com/?p=html5cool/buttons/i.frag */
-.bouncy {
-    animation:bouncy 5s infinite linear;
-    position:relative;
+/* typing effect credit to */
+/* https://codepen.io/denic/pen/GRoOxbM */
+.typing-container {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@keyframes bouncy {
-    0%{top:0em}
-    40%{top:0em}
-    43%{top:-0.9em}
-    46%{top:0em}
-    48%{top:-0.4em}
-    50%{top:0em}
-    100%{top:0em;}
+.typing-effect{
+    width: 100%;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
 }
