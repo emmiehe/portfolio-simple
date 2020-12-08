@@ -131,7 +131,7 @@ h5, p{
 .card {
     border-radius: 3vh;
     position: relative;
-    max-width: 48vh;
+    max-width: 50vh;
     max-height: 60vh;
     margin: 3vh 4vh 2vh 6vh;
     border: none;
@@ -173,7 +173,7 @@ h5, p{
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    width: 30vh;
+    width: 35vh;
     visibility: hidden;
     /*text-align: center;*/
     /*-webkit-filter: grayscale(100%);*/
